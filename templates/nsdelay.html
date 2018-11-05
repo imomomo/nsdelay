@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="//static/style.css" type="text/css">
+</head>
+
+<body>
+<div class="container">
+<header>
+   <h1>CHECK NS DELAYS</h1>
+</header>
+  
+<article>
+	<h1>
+		<form action="">
+  		Station name (leiden, eindhoven, utrecht, amsterdam):<br>
+  		<input type="text" name="name1" >
+
+  		<input type="submit" value="Submit">
+		</form> 
+	</h1>
+	<img src="images/underconstruction.jpg" style="width:100%" alt="">
+
+	<button id='closeWindow' class="button" onclick="windowClose()">Close Me</button>
+	
+</article>
+<h1>Reply is: {{reply}} </h1>
+<footer></footer>
+
+</div>
+
+
+<script>
+function windowClose() {
+window.open('','_parent','');
+window.close();
+}
+</script>
+
+</body>
+</html>
