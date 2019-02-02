@@ -20,8 +20,8 @@ def ns():
         response="what?"
     if type(stationName)==str:
         name_station=df_station.loc[df_station['name'] == stationName, 'code'].values[0]
-        username = os.environ["USERNAME"]
-        password = os.environ["PASSWORD"]
+        username = 'p.kecman@tudelft.nl'
+        password = '8NYtYnrTlQCFP7LX33EI-e8lZKj7gcUuqLJf8uHs4vk8_kvWAKoO_g'
         url = 'http://webservices.ns.nl/ns-api-avt?station='+name_station
         response = requests.get(url,auth=requests.auth.HTTPBasicAuth(username,password))#receive HTTp respond code, eg. 200, 401
         response=response.text#receive the content in text
