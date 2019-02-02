@@ -43,7 +43,6 @@ git commit -a -m "my sample message" .
     *.pyc
     .vscode
 
-
 # Create an empty repo in github
 git remote add origin https://github.com/imomomo/nsdelay.git
 

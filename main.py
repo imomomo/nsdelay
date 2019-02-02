@@ -2,6 +2,7 @@ import requests
 from flask import Flask, Response,redirect, request, abort, render_template,render_template_string, send_from_directory
 from PIL import Image
 import pandas as pd
+import os
 
 station_name=['leiden','eindhoven','utrecht','amsterdam']
 station_code=['LEDN','EHV','UT','ASD']
@@ -19,9 +20,8 @@ def ns():
         response="what?"
     if type(stationName)==str:
         name_station=df_station.loc[df_station['name'] == stationName, 'code'].values[0]
-
-        username = <your ns api username>
-        password = <your ns api password>
+        username = os.environ["USERNAME"]
+        password = os.environ["PASSWORD"]
         url = 'http://webservices.ns.nl/ns-api-avt?station='+name_station
         response = requests.get(url,auth=requests.auth.HTTPBasicAuth(username,password))#receive HTTp respond code, eg. 200, 401
         response=response.text#receive the content in text
