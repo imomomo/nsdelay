@@ -1,6 +1,5 @@
 import requests
 from flask import Flask, Response,redirect, request, abort, render_template,render_template_string, send_from_directory
-from PIL import Image
 import pandas as pd
 import os
 
