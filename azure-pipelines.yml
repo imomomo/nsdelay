@@ -24,6 +24,6 @@ jobs:
 
   - script: |
       python app.py
-    displayName: 'pytest'
+    displayName: 'app run'
 
  
